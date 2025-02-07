@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', () => { console.log("Welcome to Universal Link! \nThis webpage is just the tip of the iceberg. There's much more to this."); });
