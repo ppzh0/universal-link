@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Order";
+    src: url(./font/Order.ttf);
+}
+
+@font-face {
+    font-family: "BlackLetter";
+    src: url(./font/BlackLetter.otf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "BlackLetter", "Order";
+    background-color: #111;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
