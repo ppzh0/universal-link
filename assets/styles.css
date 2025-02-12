@@ -8,19 +8,101 @@
     src: url(./font/BlackLetter.otf);
 }
 
+@font-face {
+    font-family: 'NotoSansMy';
+    src: url(./font/NotoSansMyanmar.ttf);
+}
+
+#originOfDeath {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    transition: all .3s ease-in-out;
+
+    /* outline: 1px solid green; */
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    font-family: "BlackLetter", "Order";
-    background-color: #111;
-    color: #fff;
+    height: 600vh;
+    font-family: sans-serif;
+    /* background: repeating-linear-gradient(135deg,
+            hsl(225, 7%, 35%),
+            hsl(270, 17%, 14%),
+            hsl(237, 13%, 28%),
+            hsl(251, 12%, 36%));
+    color: #eee; */
 }
 
-h1, h2, h3, h4, h5 {
-    text-transform: uppercase;
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'NotoSansMy', 'Myanmar Text', sans-serif;
+}
+
+/* header component */
+header {
+    position: fixed;
+    user-select: none;
+
+    & span {
+        --universal-fontSize: 16px;
+        font-size: calc(var(--universal-fontSize) * 3.1415926535897932);
+
+        cursor: pointer;
+    }
+
+    & nav {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        place-items: center;
+        min-width: 100vw;
+
+        backdrop-filter: blur(.25rem);
+        background-color: hsla(48, 100%, 93%, 0.6);
+
+        & ul,
+        li {
+            list-style: none;
+            padding-inline-start: 0;
+        }
+
+        & ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+        }
+
+        & a {
+            padding: .375rem .75rem;
+            border-radius: 2rem;
+            text-decoration: none;
+        }
+
+        & a:hover {
+            text-decoration: underline solid;
+            outline: 2px solid yellow;
+            background-color: skyblue;
+            color: brown;
+        }
+    }
+}
+
+main {
+    width: 600px;
+    padding-top: 3rem;
+    margin: 0 auto;
 }
